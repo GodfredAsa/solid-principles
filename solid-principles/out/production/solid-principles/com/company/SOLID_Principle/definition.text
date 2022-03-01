@@ -9,20 +9,32 @@ THE PRINCIPLE STANDS FOR THE FOLLOWING ACRONYM BELOW
 5. DEPENDENCY INVERSION PRINCIPLE
 
                         SINGLE RESPONSIBILITY PRINCIPLE
-A class should have only one reason to change OR should only a single responsibility
+A class should have only one reason to change OR should only a single responsibility.
 
 
                         OPEN OR CLOSED PRINCIPLE
-A class should be opened for extension but closed to modification.
+A class should be opened for extension but closed to modification. A typical example is assuming an employee class needs to
+add an extra field qualification which the previous employee class did not have at development stage. If this extra
+requirement is to be added in the employee class it will cause old working code to break down. A according to the
+Open or closed principle another class should be created and made to extend the employee and the extra requirement added.
+This will enable existing code to continue to function without been interrupted by the new functionality.
+
 
 
                         LISKOV SUBSTITUTION PRINCIPLE
-Subclasses (derived classes) should be completely substitutable for their super class (es).
+Subclasses (derived classes) should be completely substitutable for their super class (es). This principle is relating
+to inheritance in such that the supertype (base class) can be replaceable with derived class without disrupting the
+behaviour of the program.
 
 
                         INTERFACE SEGREGATION PRINCIPLE
-A client should never be forced to implement an interface it does not use or need.
-
+A client should never be forced to implement an interface it does not use or need. This principle enforces that
+larger interfaces be broken down into smaller ones so that implementing classes do not possess methods that they do not
+require. This is somewhat related to the single responsibility principle. If an interface has two methods lets say make
+black coffee and make milk coffee and lets say ABC coffee shop only serves black coffee while implementing the interface
+forces it to have a method (make milk coffee) which it does not need. ISP states that the interface should be split into
+smaller interfaces and ABC shop should implement only the interface it needs it methods and if there is another shop
+which serves both then it can implement both interface and use their methods.
 
 
                         DEPENDENCY INVERSION PRINCIPLE
